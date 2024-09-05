@@ -309,7 +309,7 @@ let militaryUnit = {
         const typeArray = equipment[key]
         for (const item of typeArray){
             if (item.type === newEquipment.type && item.status === newEquipment.status){
-                militaryUnit.equipment[key].item.quantity += newEquipment.quantity
+                militaryUnit.equipment[key][typeArray.indexOf(item)].quantity += newEquipment.quantity
                 return militaryUnit
             }
         }
